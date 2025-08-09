@@ -8,7 +8,7 @@
 # Proxy para o backend
 [[redirects]]
   from = "/api/*"
-  to = "https://prontuario-backend.onrender.com/:splat"
+  to = "https://prontuario-backend.onrender.com/api/:splat"
   status = 200
   force = true
 
