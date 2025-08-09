@@ -5,11 +5,20 @@
 [build.environment]
   NODE_VERSION = "20"
 
+# Proxy para o backend
+[[redirects]]
+  from = "/api/*"
+  to = "https://prontuario-backend.onrender.com/:splat"
+  status = 200
+  force = true
+
+# Redirect padrão SPA
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
 
 [context.production.environment]
-  VITE_API_URL = "https://SEU_BACKEND_URL_AQUI"
+  VITE_API_URL = "https://prontuario-backend.onrender.com"
+
 
